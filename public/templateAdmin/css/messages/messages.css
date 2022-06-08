@@ -1,0 +1,49 @@
+.card-header:after {
+    display: none !important;
+}
+
+.messages-list tbody tr td {
+    padding: 12px 0 !important;
+    text-align: center !important;
+    border-radius: 0 !important;
+}
+
+.chatBox {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    min-height: 400px;
+}
+
+.direct-chat-text1 {
+    margin: 5px 10px 0 10px !important;
+    justify-content: flex-start;
+}
+
+.customTextarea1 {
+    height: auto !important;
+    min-height: 35px;
+    max-height: 120px;
+}
+
+.select2-container .select2-selection--single {
+    height: 35px !important;
+    border: 1px solid #ced4da !important;
+}
+
+.select2-selection--multiple {
+    border: 1px solid #ced4da !important;
+    min-height: 35px !important;
+}
+
+.select2-selection__choice {
+    min-height: 28px !important;
+    margin-top: 3px !important;
+    background-color: #007bff !important;
+    border-color: #006fe6 !important;
+    font-size: 14px !important;
+}
+.select2-selection__choice__remove {
+    color: white !important;
+    padding-top: 2px !important;
+}

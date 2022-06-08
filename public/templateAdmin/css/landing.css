@@ -1,0 +1,90 @@
+::-webkit-scrollbar {
+    width: 10px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #ffffff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b2afaf;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b3afb3;
+}
+
+.contactUs {
+    background-color: #ffffff55;
+    border: none !important;
+    font-size: 1rem;
+    color: white;
+}
+.contactUs:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+.contactUs::placeholder {
+    color: #cccccc;
+    opacity: 1;
+}
+
+.contactUs:-ms-input-placeholder {
+    color: #cccccc;
+}
+
+.contactUs::-ms-input-placeholder {
+    color: #cccccc;
+}
+
+.followUs {
+    border: 1px solid #ffffff55;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+.followUs:hover {
+    border: 1px solid #ffffff;
+    transition: 0.3s;
+}
+
+.logo {
+    height: 100px !important;
+    object-fit: contain;
+}
+.bigLogo {
+    max-height: 300px !important;
+    object-fit: contain;
+}
+.centered {
+    align-items: center;
+    justify-content: center;
+}
+.w-65 {
+    width: 65% !important;
+}
+.fs2 {
+    font-size: 18px !important;
+}
+.fs3 {
+    font-size: 20px !important;
+}
+.fs4 {
+    font-size: 22px !important;
+}
+.fs6 {
+    font-size: 28px !important;
+}
+.fs9 {
+    font-size: 50px !important;
+}
+.subProjImages {
+    height: 50px;
+    object-fit: contain;
+}
+.lineHeight36 {
+    line-height: 36px;
+}
