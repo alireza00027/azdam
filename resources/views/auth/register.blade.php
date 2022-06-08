@@ -1,77 +1,138 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+    <main>
+        <div class="mainContainer d-flex centered flex-column">
+            <div class="fs6 text-white">ثبت نام</div>
+            <div class="col-10 col-sm-6 col-md-6 rounded p-3 mt-4 bg-white d-flex centered flex-column animation formContainer">
+                <form action="{{route('register')}}" method="post" autocomplete="off" class="w-100 pb-2 px-3 py-4 needs-validation" novalidate>
+                    @csrf
+                    @include('admin.layout.section.errors')
+                    <div>
+                        <label for="name" class="form-label fs2">
+                            نام و نام خانوادگی <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-group">
+                            <input type="text"
+                                   name="name"
+                                   class="form-control fs1"
+                                   id="name"
+                                   placeholder=" نام و نام خانوادگی "
+                                   pattern="[\u0600-\u06FF\s]{3,}$"
+                                   required>
+                            <span class="input-group-text">
+                            <i class="fa fa-check-circle text-secondary"></i>
+                        </span>
+                            <div class="invalid-feedback">
+                                نام و نام خانوادگی اشتباه است
                             </div>
                         </div>
+                    </div>
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                    <div class="mt-3">
+                        <label for="email" class="form-label fs2">
+                            ایمیل <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-group">
+                            <input type="email"
+                                   name="email"
+                                   class="form-control fs1"
+                                   id="email"
+                                   placeholder="  ایمیل "
+                                   pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                   required>
+                            <span class="input-group-text">
+                            <i class="fa fa-check-circle text-secondary"></i>
+                        </span>
+                            <div class="invalid-feedback">
+                                ایمیل اشتباه است
                             </div>
                         </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                    </div>
+                    <div class="mt-3 mb-2">
+                        <label for="post" class="form-label fs2">
+                            مقام <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-group">
+                            <input type="text"
+                                   name="post"
+                                   class="form-control fs1"
+                                   id="post"
+                                   placeholder="  سمت و مقام "
+                                   pattern="[\u0600-\u06FF\s]{3,}$"
+                                   required>
+                            <span class="input-group-text">
+                            <i class="fa fa-check-circle text-secondary"></i>
+                        </span>
+                            <div class="invalid-feedback">
+                                سمت و مقام اشتباه است
                             </div>
                         </div>
-
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                    </div>
+                    <div class="mt-3 mb-2">
+                        <label for="code" class="form-label fs2">
+                            شناسه کاربری <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-group">
+                            <input type="text"
+                                   name="code"
+                                   class="form-control fs1"
+                                   id="code"
+                                   placeholder="  شناسه کاربری "
+                                   >
+                            <span class="input-group-text">
+                            <i class="fa fa-check-circle text-secondary"></i>
+                        </span>
+                            <div class="invalid-feedback">
+                                شناسه کاربری اشتباه است
                             </div>
                         </div>
+                    </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
+                    <div class="mt-3 mb-2">
+                        <label for="password" class="form-label fs2">
+                            کلمه عبور <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-group position-relative">
+                            <input type="password"
+                                   name="password"
+                                   class="form-control passInput fs1"
+                                   id="password"
+                                   pattern="^[A-Za-z\d@$!%*#?&]{8,}$"
+                                   placeholder="کلمه عبور"
+                                   required>
+                            <i class="fa fa-eye-slash position-absolute p-2 eye-slash-icon text-secondary"
+                               onclick="showPassword(this, 'password')">
+                            </i>
+                            <span class="input-group-text" id="passwordValidation">
+                            <i class="fa fa-check-circle text-secondary"></i>
+                        </span>
+                            <div class="invalid-feedback">
+                                کلمه عبور اشتباه است
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="mt-3 mb-2">
+                        <label for="status" class="form-label fs2">
+                            وضعیت دسترسی <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-group">
+                            <select id="status"  name="status" class="form-control select2" style="width: 100%;">
+                                <option value="pending">تعلیق</option>
+                                <option value="employee">همکار</option>
+                                <option value="leave">قطع همکاری</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                وضعیت دسترسی اشتباه است
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button class="btn btn-primary col-12 mb-3 mt-4 mb-4" type="submit">ثبت نام</button>
+                </form>
             </div>
+            <p class="copyRight mt-3 fs1">از دم همراه همیشگی شما</p>
         </div>
-    </div>
-</div>
+    </main>
 @endsection
