@@ -162,7 +162,7 @@
                                 خروج
                             </p>
                         </a>
-                        <form id="form-logout" action="{{'logout'}}" method="post" style="display: none">
+                        <form id="form-logout" action="#" method="post" style="display: none">
                             {{csrf_field()}}
                             <div class="nav-link">
                                 <button type="submit"><i class="nav-icon fa fa-power-off">خروج</i></button>
