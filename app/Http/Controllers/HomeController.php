@@ -20,7 +20,6 @@ class HomeController extends Controller {
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index() {
-        dd(auth()->user());
-        return view('home');
+        return view('web.home');
     }
 }
