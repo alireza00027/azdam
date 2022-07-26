@@ -81,7 +81,7 @@
                     @if (auth()->check())
                     <span class="compare-label d-lg-show">حساب من </span>
                     @else
-                    <span class="compare-label d-lg-show">ورود/ثبت نام</span>
+                    <a href="{{route('login')}}"><span class="compare-label d-lg-show">ورود/ثبت نام</span></a>
                     @endif
                 </a>
                 <div class="dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2 text-white">
