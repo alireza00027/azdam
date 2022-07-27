@@ -59,7 +59,7 @@ return array(
     "required"         => "فیلد :attribute الزامی است",
     "required_if"      => "فیلد :attribute هنگامی که :other برابر با :value است، الزامیست.",
     "required_with"    => ":attribute الزامی است زمانی که :values موجود است.",
-    "required_with_all"=> ":attribute الزامی است زمانی که :values موجود است.",
+    "required_with_all" => ":attribute الزامی است زمانی که :values موجود است.",
     "required_without" => ":attribute الزامی است زمانی که :values موجود نیست.",
     "required_without_all" => ":attribute الزامی است زمانی که :values موجود نیست.",
     "same"             => ":attribute و :other باید مانند هم باشند.",
@@ -98,10 +98,10 @@ return array(
     */
     'attributes' => array(
         "name" => "نام",
-        "username" => "نام کاربری",
+        "nickname" => "نام کاربری",
         "email" => "پست الکترونیکی",
-        "first_name" => "نام",
-        "last_name" => "نام خانوادگی",
+        "fname" => "نام",
+        "lname" => "نام خانوادگی",
         "password" => "رمز عبور",
         "password_confirmation" => "تاییدیه ی رمز عبور",
         "city" => "شهر",

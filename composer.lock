@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d5c3912e0b0eaf7de4cf89c2a741739",
+    "content-hash": "8cde30bc6afe2f5b82e7c3dcdbf943dd",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2909,6 +2909,65 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "sadegh19b/laravel-persian-validation",
+            "version": "1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sadegh19b/laravel-persian-validation.git",
+                "reference": "dd2e4065b09cece03aa4daa19e96f0100720e8af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sadegh19b/laravel-persian-validation/zipball/dd2e4065b09cece03aa4daa19e96f0100720e8af",
+                "reference": "dd2e4065b09cece03aa4daa19e96f0100720e8af",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^6|^7|^8|^9",
+                "php": "~7.4|| ^8"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Sadegh19b\\LaravelPersianValidation\\PersianValidationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sadegh19b\\LaravelPersianValidation\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sadegh Barzegar",
+                    "email": "sadegh19b@gmail.com"
+                }
+            ],
+            "description": "A persian alphabet, number and etc. validation package for laravel",
+            "keywords": [
+                "farsi",
+                "laravel",
+                "persian",
+                "validate",
+                "validation",
+                "validator"
+            ],
+            "support": {
+                "issues": "https://github.com/sadegh19b/laravel-persian-validation/issues",
+                "source": "https://github.com/sadegh19b/laravel-persian-validation/tree/1.3.2"
+            },
+            "time": "2022-06-21T05:20:38+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

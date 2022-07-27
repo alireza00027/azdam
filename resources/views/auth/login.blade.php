@@ -33,6 +33,7 @@
                         </li>
                     </ul>
                     <div class="tab-content">
+                        @include('layouts.sections.errors')
                         <div class="tab-pane active" id="sign-in">
                             <form action="/login" method="POST">
                                 @csrf
@@ -82,7 +83,7 @@
                                     </div>
                                     <div class="form-group mb-5">
                                         <label>تکرار رمز عبور *</label>
-                                        <input type="text" class="form-control" name="confirm_password" id="password_1" required>
+                                        <input type="text" class="form-control" name="password_confirmation" id="password_1" required>
                                     </div>
                                 </div>
                                 <p>داده های شخصی شما برای پشتیبانی از تجربه شما در سراسر این وب سایت، مدیریت دسترسی به حساب شما، و برای اهداف دیگری که در ما توضیح داده شده است، استفاده خواهد شد. <a href="#" class="text-primary">سیاست حفظ حریم خصوصی  </a>.</p>
