@@ -16,6 +16,7 @@ class CreateStoresTable extends Migration {
             $table->enum('type', ['gold', 'silver', 'bronze'])->nullable();
             $table->integer('period_of_time')->unsigned();
             $table->integer('rent_fee')->unsigned();
+            $table->integer('products_count')->unsigned();
             $table->timestamps();
         });
     }

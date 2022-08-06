@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('style')
+<link rel="stylesheet" type="text/css" href="{{asset('webTemplate/assets/css/style-rtl.min.css')}}">
+    
+@endsection
 
 @section('content')
 <main class="main login-page">
@@ -38,8 +42,8 @@
                             <form action="/login" method="POST">
                                 @csrf
                                 <div class="form-group">
-                                    <label>ایمیل یا نام کاربری *</label>
-                                    <input type="text" class="form-control" name="nickname" id="username" required>
+                                    <label>ایمیل *</label>
+                                    <input type="text" class="form-control" name="email" id="username" required>
                                 </div>
                                 <div class="form-group mb-0">
                                     <label>رمز عبور *</label>

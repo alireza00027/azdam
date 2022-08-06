@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::prefix('store')->group(function () {
-    Route::get('/create', [StoreController::class, 'create'])->name('stors.create');
+Route::prefix('stores')->group(function () {
+    Route::get('/', [StoreController::class, 'index'])->name('stores.index');
+    Route::get('/{type}/show', [StoreController::class, 'show'])->name('stores.show');
+    Route::get('/{type}/create', [StoreController::class, 'create'])->name('stores.create');
 });

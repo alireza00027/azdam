@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-    <title>از دم-پاساژی برای شما</title>
+    <title>{{$title ?? 'از دم-پاساژی برای شما'}}</title>
 
     <meta name="keywords" content="Marketplace ecommerce responsive HTML5 Template" />
     <meta name="description" content="Wolmart is powerful marketplace &amp; ecommerce responsive Html5 Template.">
@@ -44,9 +44,10 @@
     <link rel="stylesheet" type="text/css" href="{{asset('webTemplate/assets/vendor/swiper/swiper-bundle.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('webTemplate/assets/vendor/animate/animate.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('webTemplate/assets/vendor/magnific-popup/magnific-popup.min.css')}}">
+    <link rel="icon" type="image/png" href="{{asset('webTemplate/assets/images/icons/favicon.png')}}">
 
     <!-- Default CSS -->
-    <link rel="stylesheet" type="text/css" href="{{asset('webTemplate/assets/css/demo.min.css')}}">
+    
     @yield('style')
 </head>
 

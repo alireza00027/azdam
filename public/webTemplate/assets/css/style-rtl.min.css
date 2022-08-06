@@ -14317,6 +14317,13 @@ body .product-popup {
   margin-bottom: 0.5rem;
 }
 
+.vendor-product-price {
+  font-size: 1.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0.5rem;
+}
+
 .vendor-banner {
   min-height: 18rem;
 }
@@ -14421,7 +14428,7 @@ body .product-popup {
   border-radius: 50%;
   background-color: #336699;
 }
-.vendor-widget-banner .vendor-logo img {
+.vendor-widget-banner .vendor-logo img ,.vendor-widget-banner .vendor-logo svg {
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -14454,6 +14461,11 @@ body .product-popup {
   border-color: transparent;
 }
 .vendor-widget-banner:hover .vendor-logo img {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.vendor-widget-banner:hover .vendor-logo svg {
   -webkit-transform: translateY(-1rem);
           transform: translateY(-1rem);
 }

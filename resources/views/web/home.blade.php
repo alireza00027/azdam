@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('style')
-    
+<link rel="stylesheet" type="text/css" href="{{asset('webTemplate/assets/css/demo.min.css')}}">
 @endsection
 @section('content')
 <div class="intro-section mb-2">

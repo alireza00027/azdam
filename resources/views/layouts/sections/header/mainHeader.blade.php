@@ -695,6 +695,9 @@
                                     <li><a href="element-vendors.html">فروشندگان </a></li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="{{route('user.stores.index')}}">خرید فروشگاه</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
