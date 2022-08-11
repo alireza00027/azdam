@@ -60,37 +60,34 @@
                         <div class="tab-pane" id="sign-up">
                             <form action="/register" method="POST">
                                 @csrf
-                                <div class="checkbox-content login-vendor">
-                                    <div class="form-group">
-                                        <label>نام کوچک  *</label>
-                                        <input type="text" class="form-control" name="fname" id="first-name" required>
-                                    </div>
-                                    <div class="form-group mb-5">
-                                        <label> نام خانوادگی  *</label>
-                                        <input type="text" class="form-control" name="lname" id="last-name" required>
-                                    </div>
-                                    <div class="form-group mb-5">
-                                        <label>نام کاربری *</label>
-                                        <input type="text" class="form-control" name="nickname" id="shop-name" required>
-                                    </div>
-                                    <div class="form-group mb-5">
-                                        <label> تلفن  *</label>
-                                        <input type="text" class="form-control" name="mobile" id="phone-number" required>
-                                    </div>
-                                    <div class="form-group mb-5">
-                                        <label>آدرس ایمیل شما  *</label>
-                                        <input type="text" class="form-control" name="email" id="email_1" required>
-                                    </div>
-                                    <div class="form-group mb-5">
-                                        <label>رمز عبور *</label>
-                                        <input type="text" class="form-control" name="password" id="password_1" required>
-                                    </div>
-                                    <div class="form-group mb-5">
-                                        <label>تکرار رمز عبور *</label>
-                                        <input type="text" class="form-control" name="password_confirmation" id="password_1" required>
-                                    </div>
+                                <div class="form-group">
+                                    <label>نام کوچک  *</label>
+                                    <input type="text" class="form-control" name="fname" id="first-name" required>
                                 </div>
-                                <p>داده های شخصی شما برای پشتیبانی از تجربه شما در سراسر این وب سایت، مدیریت دسترسی به حساب شما، و برای اهداف دیگری که در ما توضیح داده شده است، استفاده خواهد شد. <a href="#" class="text-primary">سیاست حفظ حریم خصوصی  </a>.</p>
+                                <div class="form-group mb-5">
+                                    <label> نام خانوادگی  *</label>
+                                    <input type="text" class="form-control" name="lname" id="last-name" required>
+                                </div>
+                                <div class="form-group mb-5">
+                                    <label>نام کاربری *</label>
+                                    <input type="text" class="form-control" name="nickname" id="shop-name" required>
+                                </div>
+                                <div class="form-group mb-5">
+                                    <label> تلفن  *</label>
+                                    <input type="text" class="form-control" name="mobile" id="phone-number" required>
+                                </div>
+                                <div class="form-group mb-5">
+                                    <label>آدرس ایمیل شما  *</label>
+                                    <input type="text" class="form-control" name="email" id="email_1" required>
+                                </div>
+                                <div class="form-group mb-5">
+                                    <label>رمز عبور *</label>
+                                    <input type="text" class="form-control" name="password" id="password_1" required>
+                                </div>
+                                <div class="form-group mb-5">
+                                    <label>تکرار رمز عبور *</label>
+                                    <input type="text" class="form-control" name="password_confirmation" id="password_1" required>
+                                </div>
                                 <div class="form-checkbox d-flex align-items-center justify-content-between mb-5">
                                     <input type="checkbox" class="custom-checkbox" id="remember" name="remember" required="">
                                     <label for="remember" class="font-size-md">من موافقم با<a  href="#" class="text-primary font-size-md"> سیاست حفظ حریم خصوصی  </a></label>

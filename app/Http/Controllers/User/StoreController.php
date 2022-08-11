@@ -38,6 +38,7 @@ class StoreController extends Controller {
     public function create($type) {
         $title = 'خرید پکیج';
         $user = auth()->user();
+        dd($user);
         $store = Store::whereType($type)->first();
         return view('user.stores.create', compact('title', 'user', 'store'));
     }
